@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <div>
+        <div style="width: 40%;margin: 0 auto">
+            <h2>
+                Escríbenos !!!
+            </h2>
+            <div class="resultado" style="color:green;font-style: italic">
+            </div>
+            <form id="formulario">
+                <div>
+                    <div style="display: flex;flex-direction: column;">
+                        <label>
+                            Nombre completo
+                        </label>
+                        <input id="nombre" type="text">
+                        <p class="errorNombre" style="color:red;font-style: italic;"></p>
+                    </div>
+                    <div style="display: flex;flex-direction: column;">
+                        <label>
+                            Asunto
+                        </label>
+                        <input id="asunto" type="text">
+                        <p class="errorAsunto" style="color:red;font-style: italic;"></p>
+                    </div>
+                </div>
+                <div style="display: flex;flex-direction: column;">
+                    <label>
+                        Mensaje
+                    </label>
+                    <textarea id="mensaje"></textarea>
+                    <p class="errorMensaje" style="color:red;font-style: italic;"></p>
+                </div>
+                <div>
+                    <button id="botton" type="submit">
+                        Envíar mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+    // Escríbe aquí tu código
+
+    const formulario = document.getElementById("formulario");
+    const nombre = document.getElementById("nombre");
+    const errorNombre = document.querySelector(".errorNombre");
+    const asunto = document.getElementById("asunto");
+    const errorAsunto = document.querySelector(".errorAsunto");
+    const mensaje = document.getElementById("mensaje");
+    const errorMensaje = document.querySelector(".errorMensaje");
+    const resultado = document.querySelector(".resultado");
+
+    formulario.addEventListener("submit", (evento) => {
+        evento.preventDefault();
+
+
+        const regExpText = /[a-zA-Z]\w+/
+
+        
+        if (!regExpText.test(nombre.value)) {
+        console.log("El nombre es requerido"); 
+        errorNombre.innerHTML = `
+        <p>El nombre es requerido</p>
+        `;  
+
+        }
+        if (!regExpText.test(asunto.value)) {
+        console.log("El asunto es requerido");
+        errorAsunto.innerHTML = `
+        <p>El asunto es requerido</p>
+        `; 
+
+        }
+        if (!regExpText.test(mensaje.value)) {
+        console.log("El mensaje es requerido");
+        errorMensaje.innerHTML = `
+        <p>El mensaje es requerido</p>
+        `; 
+        return;
+        }
+
+        console.log("Pasó las validaciones");
+        resultado.innerHTML = `
+        <p>Mensaje enviado con éxito!!!</p>
+        `;
+
+    });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btnSumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btnRestar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Escríbe aquí tu código
+
+    const valor1 = document.getElementById("valor1")
+    const valor2 = document.getElementById("valor2")
+    const btnSumar = document.getElementById("btnSumar")
+    const btnRestar = document.getElementById("btnRestar")
+    let resultado = document.querySelector(".resultado");
+
+    btnSumar.addEventListener("click", () => {
+              
+
+        console.log(resultado);
+        resultado.innerHTML = `
+        ${parseInt(valor1.value) + parseInt(valor2.value)}
+        
+        `;
+    });
+
+    btnRestar.addEventListener("click", () => {
+        
+        
+        if (total = (valor1.value - valor2.value < 0)? 0 : valor1.value - valor2.value){
+            console.log(total);          
+            
+        }
+
+        resultado.innerHTML =  total;
+
+        }
+        
+    );
+
+    </script>
+</body>
+
+</html>

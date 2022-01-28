@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 2</title>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <h2>Paleta de colores</h2>
+        <div style="display: flex">
+          <div style="display: flex; flex-direction: column">
+            <button
+              id="btn-1"
+              style="background-color: #e53e3e; width: 100px; height: 100px"
+              type="button"
+            ></button>
+            <button
+              id="btn-2"
+              style="background-color: #dd6b20; width: 100px; height: 100px"
+              type="button"
+            ></button>
+            <button
+              id="btn-3"
+              style="background-color: #faf089; width: 100px; height: 100px"
+              type="button"
+            ></button>
+            <button
+              id="btn-4"
+              style="background-color: #48bb78; width: 100px; height: 100px"
+              type="button"
+            ></button>
+            <button
+              id="btn-5"
+              style="background-color: #81e6d9; width: 100px; height: 100px"
+              type="button"
+            ></button>
+            <button
+              id="btn-6"
+              style="background-color: #d53f8c; width: 100px; height: 100px"
+              type="button"
+            ></button>
+          </div>
+          <div style="width: 500px; height: 600px">
+            <div
+              id="caja"
+              style="border: 1px solid black; width: 100%; height: 100%"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Escríbe aquí tu código
+
+      const caja = document.getElementById("caja");
+      const btn1 = document.getElementById("btn-1");
+      const btn2 = document.getElementById("btn-2");
+      const btn3 = document.getElementById("btn-3");
+      const btn4 = document.getElementById("btn-4");
+      const btn5 = document.getElementById("btn-5");
+      const btn6 = document.getElementById("btn-6");
+
+      btn1.addEventListener("click", () => {
+        console.log("hice click en el color 1");
+        caja.style.background = "#e53e3e";
+      });
+
+      btn2.addEventListener("click", () => {
+        console.log("hice click en el color 2");
+        caja.style.background = "#dd6b20";
+      });
+
+      btn3.addEventListener("click", () => {
+        console.log("hice click en el color 3");
+        caja.style.background = "#faf089";
+      });
+
+      btn4.addEventListener("click", () => {
+        console.log("hice click en el color 4");
+        caja.style.background = "#48bb78";
+      });
+
+      btn5.addEventListener("click", () => {
+        console.log("hice click en el color 5");
+        caja.style.background = "#81e6d9";
+      });
+
+      btn6.addEventListener("click", () => {
+        console.log("hice click en el color 6");
+        caja.style.background = "#d53f8c";
+      });
+
+      
+    </script>
+  </body>
+</html>
